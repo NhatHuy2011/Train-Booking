@@ -704,6 +704,7 @@ create table bookings (
     phone varchar(20),
     booking_time datetime not null,
     total_amount int not null,
+    booking_type enum('ONEWAY', 'ROUNDTRIP'),
     booking_status enum('PENDING', 'SUCCESS', 'CANCEL', 'FAIL'),
     payment_method enum('VNPAY', 'MOMO', 'ZALOPAY')
 );
@@ -711,6 +712,8 @@ create table bookings (
 #alter table bookings drop column user_type;
 #alter table bookings change column full_name booker_name varchar(100) not null;
 #alter table bookings change column citizen_identify booker_identify varchar(20) not null;
+#alter table bookings add trip_type enum('ONEWAY', 'ROUNDTRIP');
+#alter table bookings change column trip_type booking_type enum('ONEWAY', 'ROUNDTRIP') not null;
 
 create table tickets(
 	ticket_id int auto_increment primary key,
@@ -721,6 +724,7 @@ create table tickets(
     passenger_name varchar(100) not null,
     user_type enum('NGUOILON', 'TREEM', 'SINHVIEN', 'VIP'),
     passenger_identify varchar(20) not null,
+    ticket_type enum('DEPARTURE', 'RETURN') default 'DEPARTURE',
     foreign key (booking_id) references bookings(booking_id),
     foreign key (schedule_id) references schedules(schedule_id),
     foreign key (seat_id) references seats(seat_id)	
@@ -729,6 +733,6 @@ create table tickets(
 #alter table tickets add passenger_name varchar(100) not null;
 #alter table tickets add user_type enum('NGUOILON', 'TREEM', 'SINHVIEN', 'VIP');
 #alter table tickets add passenger_identify varchar(20) not null;
-
+#alter table tickets add ticket_type enum('DEPARTURE', 'RETURN') default 'DEPARTURE';
 
 
