@@ -325,7 +325,7 @@ VALUES (2, 1, 3, '2025-08-01 09:00:00', '2025-08-01 11:00:00', 100000);
 INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
 VALUES (3, 1, 3, '2025-08-01 12:00:00', '2025-08-01 15:00:00', 85000);
 INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
-VALUES (4, 1, 3, '2025-08-01 16:00:00', '2025-08-01 18:00:00', 1200000);
+VALUES (4, 1, 3, '2025-08-01 16:00:00', '2025-08-01 18:00:00', 100000);
 	
 create table seats_status (
 	seat_status_id int auto_increment primary key,
@@ -336,14 +336,365 @@ create table seats_status (
     foreign key (schedule_id) references schedules(schedule_id),
     foreign key (seat_id) references seats(seat_id)
 );
+#-----------------------SCHEDULE 1 - TAU 1----------------------------------
 INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
 VALUES (1, 1, 'AVAILABLE', '2025-07-17 09:00:00');
 INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
-VALUES (1, 2, 'OCCUPIED', '2025-07-17 09:05:00');
+VALUES (1, 2, 'AVAILABLE', '2025-07-17 09:00:00');
 INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
-VALUES (2, 3, 'AVAILABLE', '2025-07-17 09:10:00');
+VALUES (1, 3, 'AVAILABLE', '2025-07-17 09:00:00');
 INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
-VALUES (2, 4, 'OCCUPIED', '2025-07-17 09:15:00');
+VALUES (1, 4, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 5, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 6, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 7, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 8, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 9, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 10, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 11, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 12, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 13, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 14, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 15, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 16, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 17, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 18, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 19, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 20, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 21, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 22, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 23, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 24, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 25, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 26, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 27, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 28, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 29, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 30, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 31, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 32, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 33, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 34, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 35, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 36, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 37, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 38, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 39, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 40, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 41, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 42, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 43, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (1, 44, 'AVAILABLE', '2025-07-17 09:00:00');
+
+#-----------------------SCHEDULE 2 - TAU 2----------------------------------
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 45, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 46, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 47, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 48, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 49, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 50, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 51, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 52, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 53, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 54, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 55, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 56, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 57, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 58, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 59, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 60, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 61, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 62, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 63, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 64, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 65, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 66, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 67, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 68, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 69, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 70, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 71, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 72, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 73, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 74, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 75, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 76, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 77, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 78, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 79, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 80, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 81, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 82, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 83, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 84, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 85, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 86, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 87, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (2, 88, 'AVAILABLE', '2025-07-17 09:00:00');
+
+#-----------------------SCHEDULE 3 - TAU 3----------------------------------
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 89, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 90, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 91, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 92, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 93, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 94, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 95, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 96, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 97, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 98, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 99, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 100, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 101, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 102, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 103, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 104, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 105, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 106, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 107, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 108, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 109, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 110, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 111, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 112, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 113, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 114, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 115, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 116, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 117, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 118, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 119, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 120, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 121, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 122, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 123, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 124, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 125, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 126, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 127, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 128, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 129, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 130, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 131, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (3, 132, 'AVAILABLE', '2025-07-17 09:00:00');
+
+#-----------------------SCHEDULE 4 - TAU 4----------------------------------
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 133, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 134, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 135, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 136, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 137, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 138, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 139, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 140, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 141, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 142, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 143, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 144, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 145, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 146, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 147, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 148, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 149, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 150, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 151, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 152, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 153, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 154, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 155, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 156, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 157, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 158, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 159, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 160, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 161, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 162, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 163, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 164, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 165, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 166, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 167, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 168, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 169, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 170, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 171, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 172, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 173, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 174, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 175, 'AVAILABLE', '2025-07-17 09:00:00');
+INSERT INTO seats_status (schedule_id, seat_id, seat_status, last_updated)
+VALUES (4, 176, 'AVAILABLE', '2025-07-17 09:00:00');
 
 create table bookings (
 	booking_id int auto_increment primary key,
