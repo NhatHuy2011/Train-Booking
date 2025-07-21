@@ -1,5 +1,5 @@
 package com.trainbooking.service;
 
-public class ScheduleService {
+public interface IBookingService {
 
 }

@@ -1,5 +1,5 @@
 package com.trainbooking.entity;
 
-public class Carriages {
+public class Train {
 
 }

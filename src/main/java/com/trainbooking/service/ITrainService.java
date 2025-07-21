@@ -1,5 +1,5 @@
 package com.trainbooking.service;
 
-public class SeatService {
+public interface ITrainService {
 
 }

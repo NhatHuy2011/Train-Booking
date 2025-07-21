@@ -1,5 +1,11 @@
 package com.trainbooking.repository;
 
-public interface SeatStatusRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.trainbooking.entity.SeatStatus;
+
+@Repository
+public interface SeatStatusRepository extends JpaRepository<SeatStatus, Integer>{
 
 }
