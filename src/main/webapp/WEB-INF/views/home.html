@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
+<meta charset="UTF-8">
+<title>Trang Chủ Đường Sắt</title>
+<link rel="stylesheet" href="/TrainBooking/resources/css/home.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+	rel="stylesheet">
 </head>
 <body>
-    <h1>Trang chủ</h1>
-    <h1>Menu</h1>
+	<div class="wrapper">
+		<header>
+			<img src="/TrainBooking/resources/images/header.png" alt="Header">
+			<div id="clock"></div>
+
+			<nav class="header-menu">
+				<a href="/TrainBooking/reservation.html">Thông tin đặt chỗ</a> 
+				<a href="/TrainBooking/cancel.html">Trả vé</a> 
+				<a href="/TrainBooking/check.html">Kiểm tra vé</a>
+			</nav>
+		</header>
+
+
+		<div class="content">
+			<!-- Banner trái -->
+			<div class="banner-left">
+				<img src="/TrainBooking/resources/images/banner1-left.jpg" alt="">
+				<img src="/TrainBooking/resources/images/banner2-left.jpg" alt="">
+			</div>
+
+			<!-- Nội dung chính -->
+			<main>
+				<h1>🚆 Tra cứu hành trình</h1>
+				<form>
+					<label for="fromStation">Ga đi:</label>
+					<div class="input-group">
+						<input type="text" id="fromStation" name="fromStation"
+							autocomplete="off" placeholder="Nhập ga đi">
+						<div id="fromStationSuggestions" class="suggestion-box"></div>
+					</div>
+
+					<label for="toStation">Ga đến:</label>
+					<div class="input-group">
+						<input type="text" id="toStation" name="toStation"
+							autocomplete="off" placeholder="Nhập ga đến">
+						<div id="toStationSuggestions" class="suggestion-box"></div>
+					</div>
+
+					<div class="trip-type">
+						<label>Loại vé:</label> <label><input type="radio"
+							name="tripType" value="oneway" checked> Một chiều</label> <label><input
+							type="radio" name="tripType" value="roundtrip"> Khứ hồi</label>
+					</div>
+
+					<label>Ngày đi:</label> <input type="date" name="departureDate">
+
+					<div id="returnDateContainer" style="display: none;">
+						<label>Ngày về:</label> <input type="date" name="returnDate">
+					</div>
+
+					<button type="submit">🔍 Tìm kiếm</button>
+				</form>
+			</main>
+
+			<!-- Banner phải -->
+			<div class="banner-right">
+				<img src="/TrainBooking/resources/images/banner1-right.jpg" alt="">
+				<img src="/TrainBooking/resources/images/banner2-right.jpg" alt="">
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer-content">
+				<p>
+					&copy; 2025 <strong>Đường Sắt Việt Nam</strong> 🚄 | Hành trình an
+					toàn - Tiện lợi - Thân thiện
+				</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="/TrainBooking/resources/js/home.js"></script>
 </body>
 </html>

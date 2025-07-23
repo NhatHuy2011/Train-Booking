@@ -1,0 +1,188 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', Arial, sans-serif;
+  background: linear-gradient(to right, #eef4fa, #f7fbfe);
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: relative;
+  background: linear-gradient(to right, #0277bd, #0288d1);
+  color: white;
+  text-align: center;
+  padding: 10px 0 15px 0; /* tăng padding-bottom một chút */
+}
+
+#clock {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+}
+
+.header-menu {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-menu a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 40px; /* khoảng cách giữa main và banner */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.banner-left,
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* GIÃN hơn lúc đầu */
+  width: 180px;
+}
+
+.banner-left img,
+.banner-right img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+/* so le nhẹ 2 bên */
+.banner-left img:nth-child(even) {
+  margin-left: -100px;
+}
+.banner-right img:nth-child(odd) {
+  margin-left: 90px;
+}
+
+main {
+  flex: 1;
+  max-width: 800px; /* kích cỡ chính giữa như lúc đầu */
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1;
+  height: 650px;
+}
+
+main h1 {
+  color: #0277bd;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.input-group {
+  position: relative;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 50px;
+  padding: 10px 30px;
+  background: #0288d1;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background: #0277bd;
+}
+
+.trip-type {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.suggestion-box {
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.suggestion-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestion-box li {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.suggestion-box li:hover {
+  background-color: #f1f1f1;
+}
+
+footer {
+  background: linear-gradient(to right, #0277bd, #0288d1);
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}

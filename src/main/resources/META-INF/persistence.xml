@@ -3,12 +3,6 @@
     <persistence-unit name="persistence-data">
         <class>com.trainbooking.entity.Station</class>
         <class>com.trainbooking.entity.Train</class>
-        <class>com.trainbooking.entity.Carriage</class>
-        <class>com.trainbooking.entity.Seat</class>
-        <class>com.trainbooking.entity.Schedule</class>
-        <class>com.trainbooking.entity.SeatStatus</class>
-        <class>com.trainbooking.entity.Booking</class>
-        <class>com.trainbooking.entity.Ticket</class>
     </persistence-unit>
 </persistence>
 
