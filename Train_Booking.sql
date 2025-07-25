@@ -305,6 +305,59 @@ INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (16, 10,
 INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (16, 11, 'TANG3', 0);
 INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (16, 12, 'TANG3', 0);
 
+#----------------------------------------Tau 5----------------------------------------------#
+#Toa 1
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 1, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 2, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 3, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 4, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 5, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 6, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 7, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 8, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 9, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 10, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 11, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (17, 12, 'NGOIMEM', 0);
+
+#Toa 2
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 1, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 2, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 3, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 4, 'NGOIMEM', 1);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 5, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 6, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 7, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 8, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 9, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 10, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 11, 'NGOIMEM', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (18, 12, 'NGOIMEM', 0);
+
+#Toa 3
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 1, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 2, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 3, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 4, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 5, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 6, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 7, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (19, 8, 'TANG2', 0);
+
+#Toa 4
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 1, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 2, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 3, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 4, 'TANG1', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 5, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 6, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 7, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 8, 'TANG2', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 9, 'TANG3', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 10, 'TANG3', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 11, 'TANG3', 0);
+INSERT INTO seats (carriage_id, seat_number, seat_type, is_head) VALUES (20, 12, 'TANG3', 0);
+
 create table schedules (
 	schedule_id int auto_increment primary key,
     train_id int not null,
@@ -326,7 +379,24 @@ INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, depar
 VALUES (3, 1, 3, '2025-08-01 12:00:00', '2025-08-01 15:00:00', 85000);
 INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
 VALUES (4, 1, 3, '2025-08-01 16:00:00', '2025-08-01 18:00:00', 100000);
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (5, 1, 3, '2025-08-01 18:00:00', '2025-08-01 22:00:00', 60000);
+
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (1, 3, 1, '2025-08-02 06:00:00', '2025-08-01 08:00:00', 100000);
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (2, 3, 1, '2025-08-02 09:00:00', '2025-08-01 11:00:00', 100000);
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (3, 3, 1, '2025-08-02 12:00:00', '2025-08-01 15:00:00', 85000);
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (4, 3, 1, '2025-08-02 16:00:00', '2025-08-01 18:00:00', 100000);
+INSERT INTO schedules (train_id, departure_station_id, arrival_station_id, departure_time, arrival_time, base_price) 
+VALUES (5, 3, 1, '2025-08-02 18:00:00', '2025-08-01 22:00:00', 60000);
 	
+select *
+from schedules 
+where departure_station_id = 1 and arrival_station_id = 3 and date(departure_time) = '2025-08-01';
+
 create table seats_status (
 	seat_status_id int auto_increment primary key,
     schedule_id int not null,

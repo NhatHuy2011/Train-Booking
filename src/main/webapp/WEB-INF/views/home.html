@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Trang Chủ Đường Sắt</title>
-<link rel="stylesheet" href="/TrainBooking/resources/css/home.css">
+<link rel="stylesheet" th:href="@{/resources/css/home.css}">
 <link
 	href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
 	rel="stylesheet">
@@ -11,13 +11,14 @@
 <body>
 	<div class="wrapper">
 		<header>
-			<img src="/TrainBooking/resources/images/header.png" alt="Header">
+			<img th:src="@{/resources/images/header.png}" alt="Header">
 			<div id="clock"></div>
 
 			<nav class="header-menu">
-				<a href="/TrainBooking/reservation.html">Thông tin đặt chỗ</a> 
-				<a href="/TrainBooking/cancel.html">Trả vé</a> 
-				<a href="/TrainBooking/check.html">Kiểm tra vé</a>
+				<a th:href="@{/}">Trang chủ</a>
+				<a th:href="@{/schedule}">Thông tin đặt chỗ</a> 
+				<a th:href="@{/cancel}">Trả vé</a> 
+				<a th:href="@{/check}">Kiểm tra vé</a>
 			</nav>
 		</header>
 
@@ -25,25 +26,27 @@
 		<div class="content">
 			<!-- Banner trái -->
 			<div class="banner-left">
-				<img src="/TrainBooking/resources/images/banner1-left.jpg" alt="">
-				<img src="/TrainBooking/resources/images/banner2-left.jpg" alt="">
+				<img th:src="@{/resources/images/banner1-left.jpg}" alt="">
+				<img th:src="@{/resources/images/banner2-left.jpg}" alt="">
 			</div>
 
 			<!-- Nội dung chính -->
 			<main>
 				<h1>🚆 Tra cứu hành trình</h1>
-				<form>
+				<form method="get" th:action="@{/schedule}">
 					<label for="fromStation">Ga đi:</label>
 					<div class="input-group">
-						<input type="text" id="fromStation" name="fromStation"
-							autocomplete="off" placeholder="Nhập ga đi">
+						<input type="text" id="fromStation" placeholder="Nhập ga đi"
+							autocomplete="off"> <input type="hidden"
+							name="departureStationId" id="fromStationId">
 						<div id="fromStationSuggestions" class="suggestion-box"></div>
 					</div>
 
 					<label for="toStation">Ga đến:</label>
 					<div class="input-group">
-						<input type="text" id="toStation" name="toStation"
-							autocomplete="off" placeholder="Nhập ga đến">
+						<input type="text" id="toStation" placeholder="Nhập ga đến"
+							autocomplete="off"> <input type="hidden"
+							name="arrivalStationId" id="toStationId">
 						<div id="toStationSuggestions" class="suggestion-box"></div>
 					</div>
 
@@ -53,20 +56,27 @@
 							type="radio" name="tripType" value="roundtrip"> Khứ hồi</label>
 					</div>
 
-					<label>Ngày đi:</label> <input type="date" name="departureDate">
+					<label>Ngày đi:</label> <input type="date" name="date">
 
 					<div id="returnDateContainer" style="display: none;">
-						<label>Ngày về:</label> <input type="date" name="returnDate">
+						<label>Ngày về:</label> <input type="date" name="returnDate" id="returnDate">
 					</div>
-
+					<script>
+					  document.querySelector("form").addEventListener("submit", function (e) {
+					    const returnDateInput = document.getElementById("returnDate");
+					    if (returnDateInput && returnDateInput.value.trim() === "") {
+					      returnDateInput.removeAttribute("name");
+					    }
+					  });
+					</script>					
 					<button type="submit">🔍 Tìm kiếm</button>
 				</form>
 			</main>
 
 			<!-- Banner phải -->
 			<div class="banner-right">
-				<img src="/TrainBooking/resources/images/banner1-right.jpg" alt="">
-				<img src="/TrainBooking/resources/images/banner2-right.jpg" alt="">
+				<img th:src="@{/resources/images/banner1-right.jpg}" alt="">
+				<img th:src="@{/resources/images/banner2-right.jpg}" alt="">
 			</div>
 		</div>
 
@@ -80,6 +90,6 @@
 		</footer>
 	</div>
 
-	<script src="/TrainBooking/resources/js/home.js"></script>
+	<script th:src="@{/resources/js/home.js}"></script>
 </body>
 </html>

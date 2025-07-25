@@ -1,10 +1,13 @@
 package com.trainbooking.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -20,6 +23,12 @@ public class Station {
 	
 	@Column(name = "station_location")
 	private String stationLocation;
+	
+	@OneToMany(mappedBy = "departureStation")
+	List<Schedule> departureSchedules;
+	
+	@OneToMany(mappedBy = "arrivalStation")
+	List<Schedule> arrivalSchedules;
 	
 	public Station() {
 		super();

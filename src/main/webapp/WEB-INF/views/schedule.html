@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Kết quả lịch trình</title>
+  <link rel="stylesheet" th:href="@{/resources/css/home.css}">
+  <link rel="stylesheet" th:href="@{/resources/css/schedule.css}">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img th:src="@{/resources/images/header.png}" alt="Header">
+      <div id="clock"></div>
+      <nav class="header-menu">
+        <a th:href="@{/}">Trang chủ</a>
+        <a th:href="@{/schedule}">Thông tin đặt chỗ</a>
+        <a th:href="@{/cancel}">Trả vé</a>
+        <a th:href="@{/check}">Kiểm tra vé</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <main class="main-container">
+        <h1 class="title">🚄 Kết quả lịch trình</h1>
+
+        <!-- Nếu có cả lượt đi và lượt về -->
+        <div th:if="${returnSchedules != null}">
+          <!-- Lượt đi -->
+          <div class="trip-section">
+            <h2>Lượt đi</h2>
+            <div class="train-list-wrapper horizontal-scroll">
+              <div class="train-list horizontal">
+                <div class="train-card" th:each="schedule : ${schedules}">
+                  <div class="train-image">
+                    <img th:src="@{/resources/images/train-head.png}" alt="Tàu hỏa">
+                  </div>
+                  <div class="train-info">
+                    <h2 th:text="${schedule.trainResponse.trainName}">Tên Tàu</h2>
+                    <p><strong>Ga đi:</strong> <span th:text="${schedule.departureStationResponse.stationName}">Ga đi</span></p>
+                    <p><strong>Ga đến:</strong> <span th:text="${schedule.arrivalStationResponse.stationName}">Ga đến</span></p>
+                    <p><strong>Thời gian khởi hành:</strong> <span th:text="${#dates.format(schedule.departureTime, 'HH:mm:ss dd-MM-yyyy')}">08:00</span></p>
+                    <p><strong>Thời gian đến:</strong> <span th:text="${#dates.format(schedule.arrivalTime, 'HH:mm:ss dd-MM-yyyy')}">12:30</span></p>
+                    <p><strong>Giá vé:</strong> <span th:text="${schedule.basePrice} + ' VND'">250,000 VND</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lượt về -->
+          <div class="trip-section">
+            <h2>Lượt về</h2>
+            <div class="train-list-wrapper horizontal-scroll">
+              <div class="train-list horizontal">
+                <div class="train-card" th:each="schedule : ${returnSchedules}">
+                  <div class="train-image">
+                    <img th:src="@{/resources/images/train-head.png}" alt="Tàu hỏa">
+                  </div>
+                  <div class="train-info">
+                    <h2 th:text="${schedule.trainResponse.trainName}">Tên Tàu</h2>
+                    <p><strong>Ga đi:</strong> <span th:text="${schedule.departureStationResponse.stationName}">Ga đi</span></p>
+                    <p><strong>Ga đến:</strong> <span th:text="${schedule.arrivalStationResponse.stationName}">Ga đến</span></p>
+                    <p><strong>Thời gian khởi hành:</strong> <span th:text="${#dates.format(schedule.departureTime, 'HH:mm:ss dd-MM-yyyy')}">08:00</span></p>
+                    <p><strong>Thời gian đến:</strong> <span th:text="${#dates.format(schedule.arrivalTime, 'HH:mm:ss dd-MM-yyyy')}">12:30</span></p>
+                    <p><strong>Giá vé:</strong> <span th:text="${schedule.basePrice} + ' VND'">250,000 VND</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nếu chỉ có lượt đi -->
+        <div th:if="${returnSchedules == null}">
+          <h2>Lượt đi</h2>
+          <div class="train-list-wrapper horizontal-scroll">
+            <div class="train-list horizontal">
+              <div class="train-card" th:each="schedule : ${schedules}">
+                <div class="train-image">
+                  <img th:src="@{/resources/images/train-head.png}" alt="Tàu hỏa">
+                </div>
+                <div class="train-info">
+                  <h2 th:text="${schedule.trainResponse.trainName}">Tên Tàu</h2>
+                  <p><strong>Ga đi:</strong> <span th:text="${schedule.departureStationResponse.stationName}">Ga đi</span></p>
+                  <p><strong>Ga đến:</strong> <span th:text="${schedule.arrivalStationResponse.stationName}">Ga đến</span></p>
+                  <p><strong>Thời gian khởi hành:</strong> <span th:text="${#dates.format(schedule.departureTime, 'HH:mm:ss dd-MM-yyyy')}">08:00</span></p>
+                  <p><strong>Thời gian đến:</strong> <span th:text="${#dates.format(schedule.arrivalTime, 'HH:mm:ss dd-MM-yyyy')}">12:30</span></p>
+                  <p><strong>Giá vé:</strong> <span th:text="${schedule.basePrice} + ' VND'">250,000 VND</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 <strong>Đường Sắt Việt Nam</strong> 🚄 | Hành trình an toàn - Tiện lợi - Thân thiện</p>
+      </div>
+    </footer>
+  </div>
+
+  <script th:src="@{/resources/js/home.js}"></script>
+</body>
+</html>

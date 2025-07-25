@@ -4,13 +4,6 @@ public class StationResponse {
 	private Integer stationId;
 	private String stationName;
 	private String stationLocation;
-	
-	public StationResponse(Integer stationId, String stationName, String stationLocation) {
-		super();
-		this.stationId = stationId;
-		this.stationName = stationName;
-		this.stationLocation = stationLocation;
-	}
 
 	public StationResponse() {
 		super();

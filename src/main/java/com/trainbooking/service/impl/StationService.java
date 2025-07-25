@@ -20,6 +20,12 @@ public class StationService implements IStationService{
 	@Autowired
 	private StationConverter stationConverter;
 	
+	/**
+	 * Lấy thông tin ga theo từ khoá (Auto Suggest)
+	 *
+	 * @param keyword Kí tự người dùng nhập
+	 * @return Danh sách các ga có chứa kí tự đó                            
+	 */
 	@Override
 	public List<StationResponse> findByStationNameContainingIgnoreCase(String keyword) {
 		List<Station> stations = stationRepository.findByStationNameContainingIgnoreCase(keyword);
@@ -31,5 +37,4 @@ public class StationService implements IStationService{
 		
 		return stationResponses;
 	}
-
 }
