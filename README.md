@@ -30,3 +30,9 @@
 ![Login Page](https://github.com/user-attachments/assets/cfa28874-e714-48b2-b313-e8374492f261)
 
 ---
+
+### 📅 Lịch trình tàu
+
+![Schedule Page](https://github.com/user-attachments/assets/635032fa-71f2-4adb-88b6-c0a7bd5c9d7d)
+
+---
